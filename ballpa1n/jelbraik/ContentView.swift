@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreMotion
 
 struct ContentView: View {
     
@@ -17,6 +18,10 @@ struct ContentView: View {
     @State var scale : CGFloat = 1
     
     @ObservedObject var c = Console.shared
+    
+    #if os(iOS) || os(watchOS)
+    let manager = CMMotionManager()
+    #endif
     
     let fg = Color(red: 1, green: 1, blue: 1)
     let bg = Color(red: 0, green: 0, blue: 0)
@@ -50,12 +55,12 @@ struct ContentView: View {
                 Spacer()
             }
             HStack {
-            #if os(iOS) || os(iPadOS) || os(tvOS) || os(watchOS)
+            #if os(iOS) || os(tvOS) || os(watchOS)
                 Text("\(UIDevice.current.systemName) 1.0 - 16.2 Jailbreak")
                     .font(.system(.body, design: .monospaced))
                     .foregroundColor(fg)
                 #elseif os(macOS)
-                Text("macOS 1.0 - 16.2 Jailbreak")
+                Text("macOS 10.0 - 13.2 'Jailbreak'")
                     .font(.system(.body, design: .monospaced))
                     .foregroundColor(fg)
                 #endif
@@ -69,16 +74,17 @@ struct ContentView: View {
     @ViewBuilder
     var bubbles: some View {
         ZStack {
-                    ForEach (1...50, id:\.self) { _ in
+                    ForEach (1...69, id:\.self) { _ in
                         Circle ()
                             .foregroundColor(Color (red: .random(in: 0.98...1),
                                                     green: .random(in: 0.9...0.98),
-                                                    blue: .random(in: 0...0.05))).opacity(.random(in: 0.4...0.6)).blur(radius: .random(in: 0...3))
+                                                    blue: .random(in: 0...0.05))).opacity(.random(in: 0.4...0.6)).blur(radius: .random(in: 0.25...5))
                         
                             .blendMode(.colorDodge) // The bottom circle is lightened by an amount determined by the top layer
-                            .animation (Animation.spring (dampingFraction: 1.5)
+                          
+                            .animation (Animation.spring (dampingFraction: 0.9)
                                             .repeatForever()
-                                            .speed (.random(in: 0.1...0.5))
+                                            .speed (.random(in: 0.75...1.5))
                                             .delay(.random (in: 0...1)), value: scale
                             )
                         
@@ -91,7 +97,7 @@ struct ContentView: View {
                     }
                 }
                 .onAppear {
-                    self.scale = 0.9 // default circle scale
+                    self.scale = 1 // default circle scale
                 }
                 .drawingGroup(opaque: false, colorMode: .linear)
                         .background(
@@ -125,7 +131,7 @@ struct ContentView: View {
     
     @ViewBuilder
     var console: some View {
-    #if os(iOS) || os(iPadOS) || os(tvOS) || os(watchOS)
+    #if os(iOS) || os(tvOS) || os(watchOS)
         let deviceHeight = UIScreen.main.bounds.height
         #elseif os(macOS)
         //hardcoded shit
@@ -143,7 +149,7 @@ struct ContentView: View {
             .padding(4)
             .flipped()
         }
-    #if os(iOS) || os(iPadOS) || os(tvOS) || os(watchOS)
+    #if os(iOS) || os(tvOS) || os(watchOS)
         .frame(height: currentStage != 0 ? deviceHeight / 4 : 0)
         #elseif os(macOS)
         .frame(height: currentStage != 0 ? CGFloat(deviceHeight / 4) : 0)
@@ -413,9 +419,8 @@ launchctl,
         ConsoleStep(delay: 1.5, line: "[+] File checksums verified"),
         ConsoleStep(delay: 0, line: "[*] No errors in verifying checksums"),
     ]),
-    StageStep(status: "Patching AMFI", avgInterval: 0.1, consoleLogs: [
-        ConsoleStep(delay: 0.1, line: "[*] Stage (26): Patching AMFI"),
-        ConsoleStep(delay: 0.1, line: "[+] Set boot-args=\"amfi_get_out_of_my_way=1\""),
+    StageStep(status: "Unknown", avgInterval: 0.1, consoleLogs: [
+        ConsoleStep(delay: 0.1, line: "[*] Stage (26): Unknown"),
     ]),
     StageStep(status: "Preparing resources", avgInterval: 0.5, consoleLogs: [
         ConsoleStep(delay: 0.1, line: "[*] Stage (27): Preparing resources"),
@@ -430,7 +435,7 @@ launchctl,
     ]),
     StageStep(status: "Installing Sileo", avgInterval: 0.1, consoleLogs: [
         ConsoleStep(delay: 0.1, line: "[*] Stage (30): Installing Sileo"),
-        ConsoleStep(delay: 0.6, line: "[+] Copied Sileo.app to /Applications"),
+        ConsoleStep(delay: 0.6, line: "[+] Copied Sileo.app to /var/jb/Applications/Sileo.app"),
     ]),
     StageStep(status: "Cleaning up", avgInterval: 1, consoleLogs: [
         ConsoleStep(delay: 0.1, line: "[*] Stage (31): Cleaning up"),
@@ -460,6 +465,5 @@ extension ConsoleStep: Equatable {
 struct PreviewIos: PreviewProvider {
     static var previews: some View {
         ContentView(triggerRespring: .constant(false))
-            .preferredColorScheme(.dark)
     }
 }

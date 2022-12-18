@@ -19,7 +19,7 @@ struct ballpa1nApp: App {
                 .preferredColorScheme(triggerRespring ? .dark : .none)
                 .scaleEffect(triggerRespring ? 0.95 : 1)
                 .brightness(triggerRespring ? -1 : 0)
-                #if os(iOS) || os(iPadOS) || os(tvOS) || os(watchOS)
+                #if os(iOS) || os(tvOS) || os(watchOS)
                     .statusBarHidden(triggerRespring)
                 #endif
                 .onChange(of: triggerRespring) { _ in
