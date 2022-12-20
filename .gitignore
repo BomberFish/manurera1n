@@ -3,3 +3,6 @@ build
 *.ipa
 *.tipa
 Payload
+
+# macos stuff
+.DS_Store
