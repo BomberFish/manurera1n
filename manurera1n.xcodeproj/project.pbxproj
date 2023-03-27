@@ -25,7 +25,7 @@
 		5755E47F2901DF6A002287D3 /* HostManager.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HostManager.c; sourceTree = "<group>"; };
 		5755E4822901E2A7002287D3 /* HostManagerBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostManagerBridge.h; sourceTree = "<group>"; };
 		5755E4832901E2B7002287D3 /* HostManagerBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostManagerBridge.m; sourceTree = "<group>"; };
-		57B7B67D28F8B54C00CC4DFE /* pissra1n.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pissra1n.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57B7B67D28F8B54C00CC4DFE /* manurera1n.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = manurera1n.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B7B68028F8B54C00CC4DFE /* ballpa1n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ballpa1n.swift; sourceTree = "<group>"; };
 		57B7B68228F8B54C00CC4DFE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		57B7B68428F8B54E00CC4DFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		57B7B67E28F8B54C00CC4DFE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				57B7B67D28F8B54C00CC4DFE /* pissra1n.app */,
+				57B7B67D28F8B54C00CC4DFE /* manurera1n.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,9 +148,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		57B7B67C28F8B54C00CC4DFE /* pissra1n */ = {
+		57B7B67C28F8B54C00CC4DFE /* manurera1n */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57B7B68B28F8B54E00CC4DFE /* Build configuration list for PBXNativeTarget "pissra1n" */;
+			buildConfigurationList = 57B7B68B28F8B54E00CC4DFE /* Build configuration list for PBXNativeTarget "manurera1n" */;
 			buildPhases = (
 				57B7B67928F8B54C00CC4DFE /* Sources */,
 				57B7B67A28F8B54C00CC4DFE /* Frameworks */,
@@ -160,9 +160,9 @@
 			);
 			dependencies = (
 			);
-			name = pissra1n;
+			name = manurera1n;
 			productName = crapra1n;
-			productReference = 57B7B67D28F8B54C00CC4DFE /* pissra1n.app */;
+			productReference = 57B7B67D28F8B54C00CC4DFE /* manurera1n.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -180,7 +180,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 57B7B67828F8B54C00CC4DFE /* Build configuration list for PBXProject "ballpa1n" */;
+			buildConfigurationList = 57B7B67828F8B54C00CC4DFE /* Build configuration list for PBXProject "manurera1n" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -193,7 +193,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				57B7B67C28F8B54C00CC4DFE /* pissra1n */,
+				57B7B67C28F8B54C00CC4DFE /* manurera1n */,
 			);
 		};
 /* End PBXProject section */
@@ -418,7 +418,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		57B7B67828F8B54C00CC4DFE /* Build configuration list for PBXProject "ballpa1n" */ = {
+		57B7B67828F8B54C00CC4DFE /* Build configuration list for PBXProject "manurera1n" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				57B7B68928F8B54E00CC4DFE /* Debug */,
@@ -427,7 +427,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57B7B68B28F8B54E00CC4DFE /* Build configuration list for PBXNativeTarget "pissra1n" */ = {
+		57B7B68B28F8B54E00CC4DFE /* Build configuration list for PBXNativeTarget "manurera1n" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				57B7B68C28F8B54E00CC4DFE /* Debug */,

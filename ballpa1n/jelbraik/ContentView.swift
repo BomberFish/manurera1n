@@ -49,13 +49,13 @@ struct ContentView: View {
     var title: some View {
         VStack {
             HStack {
-                Text("pissra1n")
+                Text("manurera1n")
                     .font(.system(size: 50, weight: .black, design: .monospaced))
                     .foregroundColor(fg)
                 Spacer()
             }
             HStack {
-                Text("\(UIDevice.current.systemName) 1.0 - 16.4 UNTETHERED Jailbreak")
+                Text("\(UIDevice.current.systemName) 15.0 - 16.4 Jailbreak")
                     .font(.system(.body, design: .monospaced))
                     .foregroundColor(fg)
                 Spacer()
@@ -70,9 +70,7 @@ struct ContentView: View {
         ZStack {
                     ForEach (1...69, id:\.self) { _ in
                         Circle ()
-                            .foregroundColor(Color (red: .random(in: 0.98...1),
-                                                    green: .random(in: 0.9...0.98),
-                                                    blue: .random(in: 0...0.05))).opacity(.random(in: 0.4...0.6)).blur(radius: .random(in: 0.25...5))
+                            .foregroundColor(.accentColor).opacity(.random(in: 0.4...0.6)).blur(radius: .random(in: 0.25...5))
                         
                             .blendMode(.colorDodge) // The bottom circle is lightened by an amount determined by the top layer
                           
@@ -175,7 +173,7 @@ struct ContentView: View {
                     .padding()
                     .background(
                         Capsule()
-                            .foregroundColor(.yellow)
+                            .foregroundColor(.accentColor)
                     )
             }
             .buttonStyle(.plain)
@@ -186,7 +184,7 @@ struct ContentView: View {
     
     @ViewBuilder
     var disclaimer: some View {
-        Text("pissra1n jailbreak made by BomberFish\n100% real (no clickbait)")
+        Text("manurera1n jailbreak made by BomberFish\n100% real (no clickbait)")
             .foregroundColor(mg)
             .font(.system(size: 10))
             .multilineTextAlignment(.center)

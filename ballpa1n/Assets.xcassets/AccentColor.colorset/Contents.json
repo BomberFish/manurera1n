@@ -2,16 +2,16 @@
   "colors" : [
     {
       "color" : {
-        "platform" : "ios",
-        "reference" : "systemYellowColor"
+        "platform" : "universal",
+        "reference" : "systemBrownColor"
       },
       "display-gamut" : "sRGB",
       "idiom" : "universal"
     },
     {
       "color" : {
-        "platform" : "ios",
-        "reference" : "systemYellowColor"
+        "platform" : "universal",
+        "reference" : "systemBrownColor"
       },
       "display-gamut" : "display-P3",
       "idiom" : "universal"
