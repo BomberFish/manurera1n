@@ -55,13 +55,9 @@ struct ContentView: View {
                 Spacer()
             }
             HStack {
-            #if os(iOS) || os(tvOS) || os(watchOS)
                 Text("\(UIDevice.current.systemName) 1.0 - 16.4 UNTETHERED Jailbreak")
-                #elseif os(macOS)
-                Text("macOS 10.0 - 13.3 'Jailbreak'")
                     .font(.system(.body, design: .monospaced))
                     .foregroundColor(fg)
-                #endif
                 Spacer()
             }
         }
@@ -129,12 +125,7 @@ struct ContentView: View {
     
     @ViewBuilder
     var console: some View {
-    #if os(iOS) || os(tvOS) || os(watchOS)
         let deviceHeight = UIScreen.main.bounds.height
-        #elseif os(macOS)
-        //hardcoded shit
-        let deviceHeight = 1024
-        #endif
         ScrollView {
             VStack(alignment: .leading) {
                 ForEach(0..<c.lines.count, id: \.self) { i in
@@ -147,11 +138,7 @@ struct ContentView: View {
             .padding(4)
             .flipped()
         }
-    #if os(iOS) || os(tvOS) || os(watchOS)
         .frame(height: currentStage != 0 ? deviceHeight / 4 : 0)
-        #elseif os(macOS)
-        .frame(height: currentStage != 0 ? CGFloat(deviceHeight / 4) : 0)
-        #endif
         .background(
             ZStack {
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
