@@ -12,15 +12,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       
-    - name: Make IPA
+    - name: Build IPA
       run: make
     - uses: actions/upload-artifact@v3
       with:
        name: IPA Download
        path: pissra1n.ipa
-    - name: Make tIPA (for TrollStore)
-      run: make && mv pissra1n.ipa pissra1n.tipa
-    - uses: actions/upload-artifact@v3
-      with:
-       name: tIPA Download (TrollStore)
-       path: pissra1n.tipa

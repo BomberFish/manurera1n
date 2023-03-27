@@ -1,14 +1,14 @@
 all: build package clean
 
 PROJECT = $(shell basename *.xcodeproj)
-TARGET = pissra1n
+TARGET = manurera1n
 CONFIGURATION = Release
 SDK = iphoneos
 
 build:
-	echo "building pissra1n for SDK $(SDK)..."
+	echo "building manurera1n for SDK $(SDK)..."
 	xcodebuild -project $(PROJECT) -target $(TARGET) -configuration $(CONFIGURATION) -sdk $(SDK) CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO clean build
-	echo "pissra1n build finished!"
+	echo "manurera1n build finished!"
 
 package:
 	rm -rf Payload
