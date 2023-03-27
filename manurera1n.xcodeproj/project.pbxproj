@@ -10,7 +10,7 @@
 		570A7FEC290301FF00FAFFC7 /* PackageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570A7FEB290301FF00FAFFC7 /* PackageManager.swift */; };
 		5755E4802901DF6A002287D3 /* HostManager.c in Sources */ = {isa = PBXBuildFile; fileRef = 5755E47F2901DF6A002287D3 /* HostManager.c */; };
 		5755E4842901E2B7002287D3 /* HostManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5755E4832901E2B7002287D3 /* HostManagerBridge.m */; };
-		57B7B68128F8B54C00CC4DFE /* ballpa1n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7B68028F8B54C00CC4DFE /* ballpa1n.swift */; };
+		57B7B68128F8B54C00CC4DFE /* manurera1n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7B68028F8B54C00CC4DFE /* manurera1n.swift */; };
 		57B7B68328F8B54C00CC4DFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7B68228F8B54C00CC4DFE /* ContentView.swift */; };
 		57B7B68528F8B54E00CC4DFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B7B68428F8B54E00CC4DFE /* Assets.xcassets */; };
 		AA1544EB2901EACA009B563A /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA1544EA2901EAC9009B563A /* IOKit.framework */; };
@@ -26,7 +26,7 @@
 		5755E4822901E2A7002287D3 /* HostManagerBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostManagerBridge.h; sourceTree = "<group>"; };
 		5755E4832901E2B7002287D3 /* HostManagerBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostManagerBridge.m; sourceTree = "<group>"; };
 		57B7B67D28F8B54C00CC4DFE /* manurera1n.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = manurera1n.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		57B7B68028F8B54C00CC4DFE /* ballpa1n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ballpa1n.swift; sourceTree = "<group>"; };
+		57B7B68028F8B54C00CC4DFE /* manurera1n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = manurera1n.swift; sourceTree = "<group>"; };
 		57B7B68228F8B54C00CC4DFE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		57B7B68428F8B54E00CC4DFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA1544E72901E9BB009B563A /* IOKitLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOKitLib.h; sourceTree = "<group>"; };
@@ -35,7 +35,6 @@
 		AA1544EC2901EDDB009B563A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AA1544F22902E9EC009B563A /* sysctlbynameButBetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sysctlbynameButBetter.swift; sourceTree = "<group>"; };
 		AA1544F42902EA1F009B563A /* ViewFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFlip.swift; sourceTree = "<group>"; };
-		D6CB007D292BD30500FE9911 /* pissra1n.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pissra1n.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +82,7 @@
 		57B7B67428F8B54C00CC4DFE = {
 			isa = PBXGroup;
 			children = (
-				D6CB007D292BD30500FE9911 /* pissra1n.entitlements */,
-				57B7B67F28F8B54C00CC4DFE /* ballpa1n */,
+				57B7B67F28F8B54C00CC4DFE /* manurera1n */,
 				57B7B67E28F8B54C00CC4DFE /* Products */,
 				AA1544E92901EAC9009B563A /* Frameworks */,
 			);
@@ -98,16 +96,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		57B7B67F28F8B54C00CC4DFE /* ballpa1n */ = {
+		57B7B67F28F8B54C00CC4DFE /* manurera1n */ = {
 			isa = PBXGroup;
 			children = (
-				57B7B68028F8B54C00CC4DFE /* ballpa1n.swift */,
+				57B7B68028F8B54C00CC4DFE /* manurera1n.swift */,
 				AA1544EF2902DAFE009B563A /* jelbraik */,
 				570A7FEA290301E000FAFFC7 /* pkgmgr */,
 				AA1544F12902E9B9009B563A /* Utilities */,
 				57B7B68428F8B54E00CC4DFE /* Assets.xcassets */,
 			);
-			path = ballpa1n;
+			path = manurera1n;
 			sourceTree = "<group>";
 		};
 		AA1544E62901E9A6009B563A /* include */ = {
@@ -216,7 +214,7 @@
 			files = (
 				57B7B68328F8B54C00CC4DFE /* ContentView.swift in Sources */,
 				5755E4842901E2B7002287D3 /* HostManagerBridge.m in Sources */,
-				57B7B68128F8B54C00CC4DFE /* ballpa1n.swift in Sources */,
+				57B7B68128F8B54C00CC4DFE /* manurera1n.swift in Sources */,
 				AA1544F52902EA1F009B563A /* ViewFlip.swift in Sources */,
 				570A7FEC290301FF00FAFFC7 /* PackageManager.swift in Sources */,
 				5755E4802901DF6A002287D3 /* HostManager.c in Sources */,
@@ -346,7 +344,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = pissra1n.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -365,13 +362,13 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ca.bomberfish.pissra1n;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.bomberfish.manurera1n;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "ballpa1n/Utilities/Zefram stolen code/bridging or something.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "manurera1n/Utilities/Zefram stolen code/bridging or something.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TVOS_DEPLOYMENT_TARGET = 15.0;
@@ -383,7 +380,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = pissra1n.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -402,13 +398,13 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ca.bomberfish.pissra1n;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.bomberfish.manurera1n;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "ballpa1n/Utilities/Zefram stolen code/bridging or something.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "manurera1n/Utilities/Zefram stolen code/bridging or something.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TVOS_DEPLOYMENT_TARGET = 15.0;
