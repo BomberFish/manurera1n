@@ -16,6 +16,10 @@
 		AA1544EB2901EACA009B563A /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA1544EA2901EAC9009B563A /* IOKit.framework */; };
 		AA1544F32902E9EC009B563A /* sysctlbynameButBetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1544F22902E9EC009B563A /* sysctlbynameButBetter.swift */; };
 		AA1544F52902EA1F009B563A /* ViewFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1544F42902EA1F009B563A /* ViewFlip.swift */; };
+		D6E3FCA629D1E2F300D019D1 /* helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E3FC9F29D1E2F300D019D1 /* helpers.m */; };
+		D6E3FCA729D1E2F300D019D1 /* vm_unaligned_copy_switch_race.c in Sources */ = {isa = PBXBuildFile; fileRef = D6E3FCA029D1E2F300D019D1 /* vm_unaligned_copy_switch_race.c */; };
+		D6E3FCA829D1E2F300D019D1 /* grant_full_disk_access.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E3FCA229D1E2F300D019D1 /* grant_full_disk_access.m */; };
+		D6E3FCA929D1E2F300D019D1 /* Unsandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E3FCA429D1E2F300D019D1 /* Unsandbox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,14 @@
 		AA1544EC2901EDDB009B563A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AA1544F22902E9EC009B563A /* sysctlbynameButBetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sysctlbynameButBetter.swift; sourceTree = "<group>"; };
 		AA1544F42902EA1F009B563A /* ViewFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFlip.swift; sourceTree = "<group>"; };
+		D6E3FC9F29D1E2F300D019D1 /* helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = helpers.m; sourceTree = "<group>"; };
+		D6E3FCA029D1E2F300D019D1 /* vm_unaligned_copy_switch_race.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vm_unaligned_copy_switch_race.c; sourceTree = "<group>"; };
+		D6E3FCA129D1E2F300D019D1 /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
+		D6E3FCA229D1E2F300D019D1 /* grant_full_disk_access.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = grant_full_disk_access.m; sourceTree = "<group>"; };
+		D6E3FCA329D1E2F300D019D1 /* vm_unaligned_copy_switch_race.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vm_unaligned_copy_switch_race.h; sourceTree = "<group>"; };
+		D6E3FCA429D1E2F300D019D1 /* Unsandbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unsandbox.swift; sourceTree = "<group>"; };
+		D6E3FCA529D1E2F300D019D1 /* grant_full_disk_access.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = grant_full_disk_access.h; sourceTree = "<group>"; };
+		D6E3FCAA29D1E3FC00D019D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,7 @@
 		57B7B67F28F8B54C00CC4DFE /* manurera1n */ = {
 			isa = PBXGroup;
 			children = (
+				D6E3FCAA29D1E3FC00D019D1 /* Info.plist */,
 				57B7B68028F8B54C00CC4DFE /* manurera1n.swift */,
 				AA1544EF2902DAFE009B563A /* jelbraik */,
 				570A7FEA290301E000FAFFC7 /* pkgmgr */,
@@ -138,9 +151,24 @@
 			children = (
 				5755E47C2901DD80002287D3 /* Zefram stolen code */,
 				AA1544F22902E9EC009B563A /* sysctlbynameButBetter.swift */,
+				D6E3FC9E29D1E2A900D019D1 /* Not MDC */,
 				AA1544F42902EA1F009B563A /* ViewFlip.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D6E3FC9E29D1E2A900D019D1 /* Not MDC */ = {
+			isa = PBXGroup;
+			children = (
+				D6E3FCA529D1E2F300D019D1 /* grant_full_disk_access.h */,
+				D6E3FCA229D1E2F300D019D1 /* grant_full_disk_access.m */,
+				D6E3FCA129D1E2F300D019D1 /* helpers.h */,
+				D6E3FC9F29D1E2F300D019D1 /* helpers.m */,
+				D6E3FCA429D1E2F300D019D1 /* Unsandbox.swift */,
+				D6E3FCA029D1E2F300D019D1 /* vm_unaligned_copy_switch_race.c */,
+				D6E3FCA329D1E2F300D019D1 /* vm_unaligned_copy_switch_race.h */,
+			);
+			path = "Not MDC";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,11 +242,15 @@
 			files = (
 				57B7B68328F8B54C00CC4DFE /* ContentView.swift in Sources */,
 				5755E4842901E2B7002287D3 /* HostManagerBridge.m in Sources */,
+				D6E3FCA829D1E2F300D019D1 /* grant_full_disk_access.m in Sources */,
+				D6E3FCA929D1E2F300D019D1 /* Unsandbox.swift in Sources */,
+				D6E3FCA729D1E2F300D019D1 /* vm_unaligned_copy_switch_race.c in Sources */,
 				57B7B68128F8B54C00CC4DFE /* manurera1n.swift in Sources */,
 				AA1544F52902EA1F009B563A /* ViewFlip.swift in Sources */,
 				570A7FEC290301FF00FAFFC7 /* PackageManager.swift in Sources */,
 				5755E4802901DF6A002287D3 /* HostManager.c in Sources */,
 				AA1544F32902E9EC009B563A /* sysctlbynameButBetter.swift in Sources */,
+				D6E3FCA629D1E2F300D019D1 /* helpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +382,8 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = manurera1n/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Needed for jelbrek.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -386,6 +420,8 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = manurera1n/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Needed for jelbrek.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

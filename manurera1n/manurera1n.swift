@@ -22,15 +22,11 @@ struct ballpa1nApp: App {
                     .statusBarHidden(triggerRespring)
                 .onChange(of: triggerRespring) { _ in
                     if triggerRespring == true {
-                        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { timer in
-                            // TY amy for respring bug
-                            guard let window = UIApplication.shared.windows.first else { return }
-                            while true {
-                               window.snapshotView(afterScreenUpdates: false)
-                            }
-                            
-                        }
+                        respringBackboard()
                     }
+                }
+                .onAppear {
+                    unsandbox()
                 }
         }
     }
